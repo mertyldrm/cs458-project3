@@ -22,28 +22,28 @@ export default function Home() {
         </p>
 
         <div className={styles.grid}>
-          <Link href="/currentCountry">
+          <Link href="/currentCountry" passHref>
             <div className={styles.card}>
               <h2>Show your Current Country &rarr;</h2>
               <p>Provide your coordinates and get the country where you are currently in!</p>
             </div>
           </Link>
 
-          <Link href="/toNorthPole">
+          <Link href="/toNorthPole" passHref>
             <div className={styles.card}>
             <h2>Distance to Terrestrial North Pole &rarr;</h2>
             <p>Automatically calculate your distance to the Geographic North Pole! </p>
             </div>
           </Link>
 
-          <Link href="/toMoonCoreOne">
+          <Link href="/toMoonCoreOne" passHref>
             <div className={styles.card}>
             <h2>Distance to the Moon Core 1 &rarr;</h2>
             <p>Provide your coordinates and get the distance to the Moon Core!</p>
             </div>
           </Link>
 
-          <Link href="/toMoonCoreTwo">
+          <Link href="/toMoonCoreTwo" passHref>
             <div className={styles.card}>
             <h2>Distance to the Moon Core 2 &rarr;</h2>
             <p>Automatically find the distance to the Moon Core with your GPS!</p>
@@ -54,13 +54,13 @@ export default function Home() {
 
       <footer className={styles.footer}>
         <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          href="https://github.com/mertyldrm/cs458-project3"
           target="_blank"
-          rel="noopener noreferrer"
+          rel="noreferrer"
         >
-          Powered by{' '}
+          Coded by{' '}
           <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
+            <b>Ahmet Işık, Mert Yıldırım and Bora Kazancı</b>
           </span>
         </a>
       </footer>
