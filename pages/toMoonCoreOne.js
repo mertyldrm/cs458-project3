@@ -22,7 +22,7 @@ function toMoonCoreOne() {
                   <hr style={{ backgroundColor: 'black', height: 5 }}/>
                   <div style={styles.resultDisplayer}>
                       <h2>The distance to the Moon's core with given latitude and longitude: </h2>
-                      <h1 style={{ color: 'red' }}>{res.data}</h1>
+                      <h1 style={{ color: 'red' }}>{res.data.distance} KM</h1>
                   </div>
               </div>);
       })

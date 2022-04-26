@@ -1,7 +1,14 @@
 export default function handler(req, res) {
+    if(req.method != 'POST') {
+        res.status(405).json({
+            error: 'Method not allowed'
+        });
+    }
+    else{
         const distance = getDistanceFromLatLonInKm(req.body.latitude, req.body.longitude);
         const result = {"distance": distance};
         res.status(200).json(result);
+      }    
 }
 
 function getDistanceFromLatLonInKm(lat1,lon1) {

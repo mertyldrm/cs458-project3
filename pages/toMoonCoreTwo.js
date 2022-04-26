@@ -52,7 +52,7 @@ export default function toMoonCoreTwo() {
               <hr style={{ backgroundColor: 'black', height: 5 }}/>
               <div style={styles.resultDisplayer}>
                   <h2>Your distance to Moon's Core: </h2>
-                  <h1 style={{ color: 'red' }}>{res.data} km</h1>
+                  <h1 style={{ color: 'red' }}>{res.data.distance} KM</h1>
               </div>
           </div>
         );
