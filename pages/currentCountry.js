@@ -21,7 +21,7 @@ export default function currentCountry() {
                     <hr style={{ backgroundColor: 'black', height: 5 }}/>
                     <div style={styles.resultDisplayer}>
                         <h2>The country with given latitude and longitude: </h2>
-                        <h1 style={{ color: 'red' }}>{res.data}</h1>
+                        <h1 style={{ color: 'red' }}>{res.data.countryName}</h1>
                     </div>
                 </div>);
         })
