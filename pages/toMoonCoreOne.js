@@ -38,7 +38,7 @@ function toMoonCoreOne() {
             <div>
               <hr style={{ backgroundColor: "black", height: 5 }} />
               <div style={styles.resultDisplayer}>
-                <p style={{ color: "red" }}>{err.response.data}</p>
+                <p style={{ color: "red" }}>{err.response.data.error}</p>
               </div>
             </div>
           );

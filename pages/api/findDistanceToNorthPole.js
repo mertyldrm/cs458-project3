@@ -1,15 +1,32 @@
 export default function handler(req, res) {
+  console.log(req.body);
   if (req.method != "POST") {
     res.status(405).json({
       error: "Method not allowed",
     });
   } else {
-    const distance = getDistanceFromLatLonInKm(
-      req.body.latitude,
-      req.body.longitude
-    );
-    const result = { distance: distance };
-    res.status(200).json(result);
+    if (req.body.latitude && req.body.longitude) {
+      if (
+        !(req.body.longitude >= -180 && req.body.longitude <= 180) ||
+        !(req.body.latitude >= -90 && req.body.latitude <= 90)
+      )
+        res.status(400).json({
+          error:
+            "Error: The numbers should be in decimal degrees format and range from -90 to 90 for latitude and -180 to 180 for longitude.",
+        });
+      else {
+        const distance = getDistanceFromLatLonInKm(
+          req.body.latitude,
+          req.body.longitude
+        );
+        const result = { distance: distance };
+        res.status(200).json(result);
+      }
+    } else {
+      res.status(400).json({
+        error: "Required request body is missing",
+      });
+    }
   }
 }
 

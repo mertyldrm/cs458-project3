@@ -55,7 +55,7 @@ export default function toNorthPole() {
             <hr style={{ backgroundColor: "black", height: 5 }} />
             <div style={styles.resultDisplayer}>
               <h2>Your distance to Terrestrial North Pole: </h2>
-              <h1 style={{ color: "red" }}>{res.data} km</h1>
+              <h1 style={{ color: "red" }}>{res.data.distance} KM</h1>
             </div>
           </div>
         );
